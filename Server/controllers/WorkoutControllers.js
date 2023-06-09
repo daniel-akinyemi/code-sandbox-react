@@ -11,4 +11,4 @@ const createWorkout = async (req,res)=>{
     }
 }
 
-export default {createWorkout}
+export {createWorkout}
