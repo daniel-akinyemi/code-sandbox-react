@@ -1,19 +1,15 @@
 import express from 'express'
-import {createWorkout} from '../controllers/WorkoutControllers.js'
+import {createWorkout,getWorkout,getWorkouts} from '../controllers/WorkoutControllers.js'
 
 const router = express.Router()
 
 
 // GET all workouts
-router.get('/',(req,res)=>{
-    res.json({message:"get all workouts"})
-})
+router.get('/', getWorkouts)
 
 
 //GET a single workout
-router.get('/:id',(req,res)=>{
-    res.json({message:"GET a single workout"})
-})
+router.get('/:id',getWorkout)
 
 //POST a new workout
 router.post('/',createWorkout)
